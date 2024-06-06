@@ -1,0 +1,16 @@
+{
+    "version":2,
+    "build" : [
+        {
+            "src" : "src/main.js",
+            "target" : "dist/main.js"
+        }
+    ],
+    "routes":[
+
+        {
+            "src" : "/(.*)",
+            "target" : "src/app/page.tsx"
+        }
+    ]
+}
