@@ -32,7 +32,14 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
       email: user.email,
     },
   })
-
+useEffect(() => {
+        if (user) {
+            form.reset({
+                name: user.name,
+                email: user.email,
+            });
+        }
+    }, [user]);
   const handleSubmit = async (
     values: z.infer<typeof EditUserProfileSchema>
   ) => {
